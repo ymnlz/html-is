@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>方贤 - 个人主页</title>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background: #2c3e50;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .nav-container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        .container {
+            width: 80%;
+            margin: 3rem auto;
+            padding: 2.5rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+        }
+
+        .title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .title-wrap {
+            text-align: center;
+        }
+
+        .banner {
+            background: linear-gradient(135deg, #3498db, #2ecc71);
+            color: #fff;
+            text-align: center;
+            padding: 6rem 0;
+        }
+
+        .banner .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            margin: 0 auto 1.5rem;
+            object-fit: cover;
+            background: #e9ecef;
+        }
+
+        .banner h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .banner p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .about-content {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+            font-size: 1.05rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            text-indent: 2em;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .skill-item {
+            width: 180px;
+            padding: 1.2rem 1rem;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            text-align: center;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .skill-item i {
+            font-size: 2rem;
+            color: #3498db;
+            margin-bottom: 0.8rem;
+        }
+
+        .skill-item:hover {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        .skill-item:hover i {
+            color: #fff;
+        }
+
+        .more-btn {
+            display: block;
+            width: 160px;
+            line-height: 40px;
+            text-align: center;
+            background: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            margin: 2rem auto 0;
+            transition: background 0.3s;
+        }
+        .more-btn:hover {
+            background: #2980b9;
+        }
+
+        .work-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .work-item {
+            border: 1px solid #eee;
+            border-radius: 6px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .work-item:hover {
+            transform: scale(1.03);
+        }
+
+        .work-item img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            background: #e9ecef;
+        }
+
+        .work-item p {
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .contact-info {
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 2.2;
+        }
+
+        .contact-info i {
+            color: #3498db;
+            margin-right: 8px;
+            width: 20px;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            nav a {
+                margin: 0 0.8rem;
+            }
+            .container, .nav-container {
+                width: 92%;
+            }
+            .banner h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">方贤的主页</div>
+            <nav>
+                <a href="#home">首页</a>
+                <a href="#about">关于我</a>
+                <a href="#skill">专业技能</a>
+                <a href="#work">个人作品</a>
+                <a href="#contact">联系我</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="banner" id="home">
+        <img class="avatar" src="https://picsum.photos/id/64/150/150" alt="个人头像">
+        <h1>你好，我是方贤</h1>
+        <p>20岁 | 数据科学与大数据技术专业 | 热爱编程与运动</p>
+    </section>
+
+    <section class="container" id="about">
+        <div class="title-wrap">
+            <h2 class="title">关于我</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>大家好，我是方贤，今年20岁，就读于云南省昆明市昆明学院，数据科学与大数据技术专业。在校期间认真学习专业知识，深耕数据处理、编程开发相关领域，不断夯实技术基础。</p>
+                <p>性格开朗真诚，喜欢和同学交流探讨，积极参与团队协作与课程项目。学习之余热爱运动，坚持锻炼，保持积极向上的状态。</p>
+                <p>保持持续学习的心态，愿意不断尝试新事物、挑战自我。希望把所学运用到实际，在大数据领域稳步前行。</p>
+                <p><strong>人生格言：</strong>道阻且长，行则将至；行而不辍，未来可期。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" id="skill">
+        <div class="title-wrap">
+            <h2 class="title">专业技能</h2>
+        </div>
+        <div class="skill-list">
+            <div class="skill-item">
+                <i class="fa-brands fa-html5"></i>
+                <div>HTML / CSS</div>
+            </div>
+            <div class="skill-item">
+                <i class="fa-brands fa-js"></i>
+                <div>JavaScript</div>
+            </div>
+            <div class="skill-item">
+                <i class="fa-brands fa-python"></i>
+                <div>Python</div>
+            </div>
+            <div class="skill-item">
+                <i class="fa-solid fa-database"></i>
+                <div>数据库</div>
+            </div>
+            <div class="skill-item">
+                <i class="fa-solid fa-palette"></i>
+                <div>UI 设计</div>
+            </div>
+            <div class="skill-item">
+                <i class="fa-solid fa-chart-line"></i>
+                <div>数据分析</div>
+            </div>
+            <div class="skill-item">
+                <i class="fa-solid fa-person-running"></i>
+                <div>运动健身</div>
+            </div>
+        </div>
+        <a href="skill.html" class="more-btn">查看技能详情</a>
+    </section>
+
+    <section class="container" id="work">
+        <div class="title-wrap">
+            <h2 class="title">个人作品</h2>
+        </div>
+        <div class="work-list">
+            <div class="work-item">
+                <img src="https://picsum.photos/id/20/400/200" alt="作品预览">
+                <p>作品一：静态企业官网</p>
+            </div>
+            <div class="work-item">
+                <img src="https://picsum.photos/id/42/400/200" alt="作品预览">
+                <p>作品二：简易小程序页面</p>
+            </div>
+            <div class="work-item">
+                <img src="https://picsum.photos/id/180/400/200" alt="作品预览">
+                <p>作品三：数据可视化项目</p>
+            </div>
+            <div class="work-item">
+                <img src="https://picsum.photos/id/119/400/200" alt="作品预览">
+                <p>作品四：个人日记网页</p>
+            </div>
+        </div>
+        <a href="work.html" class="more-btn">查看全部作品</a>
+    </section>
+
+    <section class="container" id="contact">
+        <div class="title-wrap">
+            <h2 class="title">联系我</h2>
+        </div>
+        <div class="contact-info">
+            <p><i class="fa-solid fa-envelope"></i>邮箱：example@qq.com</p>
+            <p><i class="fa-solid fa-weixin"></i>微信：WeChat_123456</p>
+            <p><i class="fa-solid fa-phone"></i>电话：138-0000-0000</p>
+            <p><i class="fa-solid fa-location-dot"></i>地址：云南省昆明市昆明学院</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 方贤 个人主页 版权所有 | 用心制作，不断进步</p>
+    </footer>
+</body>
+</html>

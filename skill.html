@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>专业技能详情 - 方贤</title>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+        body {
+            line-height: 1.8;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        header {
+            background: #2c3e50;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        .nav-container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #3498db;
+        }
+        .container {
+            width: 80%;
+            margin: 3rem auto;
+            padding: 2.5rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        .title-wrap {
+            text-align: center;
+        }
+        .skill-card {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .skill-card h3 {
+            color: #3498db;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+        }
+        .skill-card h3 i {
+            margin-right: 10px;
+            font-size: 1.4rem;
+        }
+        .level {
+            display: inline-block;
+            background: #e8f4fc;
+            color: #3498db;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            margin-left: 1rem;
+        }
+        .back-btn {
+            display: block;
+            width: 140px;
+            line-height: 38px;
+            text-align: center;
+            background: #2c3e50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            margin: 2rem auto 0;
+        }
+        .back-btn:hover {
+            background: #34495e;
+        }
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            nav a {
+                margin: 0 0.8rem;
+            }
+            .container, .nav-container {
+                width: 92%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">方贤的主页</div>
+            <nav>
+                <a href="index.html">返回首页</a>
+                <a href="skill.html">技能详情</a>
+                <a href="work.html">个人作品</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="title-wrap">
+            <h2 class="title">专业技能详情</h2>
+        </div>
+
+        <div class="skill-card">
+            <h3><i class="fa-brands fa-html5"></i> HTML + CSS <span class="level">熟练</span></h3>
+            <p>掌握页面布局、标签语义化、弹性布局、网格布局，能够独立完成静态网页制作与样式美化，熟悉常用兼容性写法。</p>
+        </div>
+
+        <div class="skill-card">
+            <h3><i class="fa-brands fa-js"></i> JavaScript <span class="level">掌握</span></h3>
+            <p>熟悉JS基础语法、变量、函数、数组、对象、简单DOM操作，可实现网页基础交互效果，具备持续深入学习能力。</p>
+        </div>
+
+        <div class="skill-card">
+            <h3><i class="fa-brands fa-python"></i> Python <span class="level">熟练</span></h3>
+            <p>作为大数据专业核心语言，熟练使用Python进行数据读取、清洗、简单运算，了解常用数据处理基础库，能够完成课程数据实验。</p>
+        </div>
+
+        <div class="skill-card">
+            <h3><i class="fa-solid fa-database"></i> 数据库 <span class="level">掌握</span></h3>
+            <p>学习过关系型数据库，熟练使用SQL语句完成增删改查、条件查询、分组、排序等基础操作，理解数据表设计思路。</p>
+        </div>
+
+        <div class="skill-card">
+            <h3><i class="fa-solid fa-chart-line"></i> 数据分析 & 可视化 <span class="level">掌握</span></h3>
+            <p>结合专业课程，能够对常规数据集进行整理、统计分析，并制作简单图表完成数据可视化展示。</p>
+        </div>
+
+        <div class="skill-card">
+            <h3><i class="fa-solid fa-person-running"></i> 运动爱好 <span class="level">日常坚持</span></h3>
+            <p>日常坚持体育锻炼，擅长各类常规运动，保持良好作息与身体素质，拥有较强耐力与执行力。</p>
+        </div>
+
+        <a href="index.html" class="back-btn">返回首页</a>
+    </div>
+
+    <footer>
+        <p>© 2026 方贤 个人主页 版权所有</p>
+    </footer>
+</body>
+</html>

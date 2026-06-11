@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人作品 - 方贤</title>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+        body {
+            line-height: 1.8;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        header {
+            background: #2c3e50;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        .nav-container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #3498db;
+        }
+        .container {
+            width: 80%;
+            margin: 3rem auto;
+            padding: 2.5rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        .title-wrap {
+            text-align: center;
+        }
+        .work-card {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+        .work-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background: #e9ecef;
+        }
+        .work-content {
+            padding: 1.5rem;
+        }
+        .work-content h3 {
+            color: #2c3e50;
+            margin-bottom: 0.6rem;
+        }
+        .tech {
+            color: #3498db;
+            font-size: 0.95rem;
+            margin-bottom: 0.8rem;
+        }
+        .back-btn {
+            display: block;
+            width: 140px;
+            line-height: 38px;
+            text-align: center;
+            background: #2c3e50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            margin: 2rem auto 0;
+        }
+        .back-btn:hover {
+            background: #34495e;
+        }
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            nav a {
+                margin: 0 0.8rem;
+            }
+            .container, .nav-container {
+                width: 92%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">方贤的主页</div>
+            <nav>
+                <a href="index.html">返回首页</a>
+                <a href="skill.html">技能详情</a>
+                <a href="work.html">个人作品</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="title-wrap">
+            <h2 class="title">全部个人作品</h2>
+        </div>
+
+        <div class="work-card">
+            <img src="https://picsum.photos/id/20/800/220" alt="企业官网">
+            <div class="work-content">
+                <h3>作品一：静态企业官网</h3>
+                <div class="tech">使用技术：HTML + CSS</div>
+                <p>仿照企业门户网站设计制作，包含导航栏、轮播区域、公司介绍、服务展示、联系板块，页面布局规整，适配电脑与手机端。</p>
+            </div>
+        </div>
+
+        <div class="work-card">
+            <img src="https://picsum.photos/id/42/800/220" alt="小程序页面">
+            <div class="work-content">
+                <h3>作品二：简易小程序页面</h3>
+                <div class="tech">使用技术：HTML + CSS + JavaScript</div>
+                <p>模仿小程序界面风格完成页面开发，加入简单点击交互、选项卡切换效果，侧重移动端适配与简约UI设计。</p>
+            </div>
+        </div>
+
+        <div class="work-card">
+            <img src="https://picsum.photos/id/180/800/220" alt="数据可视化项目">
+            <div class="work-content">
+                <h3>作品三：数据可视化项目</h3>
+                <div class="tech">使用技术：Python + 数据可视化库</div>
+                <p>结合大数据专业课程完成，对样本数据进行清洗、统计、分析，生成柱状图、折线图等图表，直观展示数据规律。</p>
+            </div>
+        </div>
+
+        <div class="work-card">
+            <img src="https://picsum.photos/id/119/800/220" alt="个人日记网页">
+            <div class="work-content">
+                <h3>作品四：个人日记网页</h3>
+                <div class="tech">使用技术：HTML + CSS + JavaScript</div>
+                <p>个性化个人记录网页，支持内容展示、简单样式切换，风格清新简洁，用作日常学习记录与练习项目。</p>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-btn">返回首页</a>
+    </div>
+
+    <footer>
+        <p>© 2026 方贤 个人主页 版权所有</p>
+    </footer>
+</body>
+</html>
